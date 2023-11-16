@@ -103,7 +103,10 @@ void setup()
     Serial.println("* is your wiring correct?");
     Serial.println("* did you change the chipSelect pin to match your shield or module?");
     SYS_LED_BLINK(LED_BL_INIT_SD_MS);
-    while (1);
+    while (1){
+      Serial.println("Set CS for SD and reset....");
+      delay(3000);
+    };
   } else {
     Serial.println("Wiring is correct and a card is present.");
     SYS_LED_BLINK(LED_BL_ERROR_MS);
